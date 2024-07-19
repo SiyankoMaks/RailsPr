@@ -1,0 +1,12 @@
+<% content_for :title, "New Lab Report" %>
+
+
+
+<div class="form-container">
+  <h1>New Lab Report</h1>
+  <%= render "form", lab_report: @lab_report %>
+  <br>
+  <div class="back-link">
+    <%= link_to "Back to Lab Reports", lab_reports_path, class: "btn-back" %>
+  </div>
+</div>

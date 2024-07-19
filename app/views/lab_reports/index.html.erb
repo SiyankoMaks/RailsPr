@@ -1,0 +1,35 @@
+<% content_for :title, "Lab reports" %>
+
+
+
+<div class="table-container">
+  <h1>Lab Reports</h1>
+  <table class="lab-report-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>User_id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Grade</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @lab_reports.each do |lab_report| %>
+        <tr>
+          <td><%= lab_report.id %></td>
+          <td><%= lab_report.user_id %></td>
+          <td><%= lab_report.title %></td>
+          <td><%= lab_report.description %></td>
+          <td><%= lab_report.grade %></td>
+          <td>
+            <%= link_to "Show", lab_report, class: "btn-show" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New Lab Report", new_lab_report_path, class: "btn-new-lab-report" %>
+</div>
+

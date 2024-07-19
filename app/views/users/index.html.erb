@@ -1,0 +1,34 @@
+
+<% content_for :title, "Users" %>
+
+
+
+<div class="table-container">
+  <h1>Users</h1>
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td>
+            <%= link_to "Show", user, class: "btn-show" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New user", new_user_path, class: "btn-new-user" %>
+</div>
+

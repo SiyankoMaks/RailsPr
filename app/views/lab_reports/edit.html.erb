@@ -1,0 +1,12 @@
+<% content_for :title, "Editing Lab Report" %>
+
+<div class="edit-lab-report-container">
+  <h1 class="page-title">Editing Lab Report</h1>
+
+  <%= render "form", lab_report: @lab_report %>
+
+  <div class="actions">
+    <%= link_to "Show this lab report", @lab_report, class: "btn-show" %> |
+    <%= link_to "Back to lab reports", lab_reports_path, class: "btn-back" %>
+  </div>
+</div>

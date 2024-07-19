@@ -1,0 +1,15 @@
+<% content_for :title, "Lab Report Details" %>
+
+<div class="lab-report-container">
+  <p class="notice"><%= notice %></p>
+
+  <div class="lab-report-details">
+    <%= render @lab_report %>
+  </div>
+
+  <div class="actions">
+    <%= link_to "Edit this lab report", edit_lab_report_path(@lab_report), class: "btn-edit" %> |
+    <%= link_to "Back to lab reports", lab_reports_path, class: "btn-back" %>
+    <%= button_to "Destroy this lab report", @lab_report, method: :delete, class: "btn-destroy", data: { confirm: "Are you sure?" } %>
+  </div>
+</div>

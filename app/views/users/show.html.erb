@@ -1,0 +1,15 @@
+<% content_for :title, "User Details" %>
+
+<div class="user-container">
+  <p class="notice"><%= notice %></p>
+
+  <div class="user-details">
+    <%= render @user %>
+  </div>
+
+  <div class="actions">
+    <%= link_to "Edit this user", edit_user_path(@user), class: "btn-edit" %> |
+    <%= link_to "Back to users", users_path, class: "btn-back" %>
+    <%= button_to "Destroy this user", @user, method: :delete, class: "btn-destroy", data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
