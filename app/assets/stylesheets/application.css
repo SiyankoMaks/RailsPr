@@ -4,6 +4,47 @@
  *= require custom
  */
 
+/* Стили для фонового видео */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* Стили для меню навигации */
+.nav-menu {
+  background-color: #333;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu ul li {
+  margin: 0 10px;
+}
+
+.nav-menu ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #111;
+}
+
 /* Общий фон для всей страницы */
 body {
   background-color: #f0f2f5;

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rails Pr</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <%= stylesheet_link_tag :all, "data-turbo-track": "reload" %>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="/videos/background.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>Welcome to Rails Pr</h1>
+        <p>Select a tab to view users or lab reports.</p>
+        <br><br>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="/users">Users</a></li>
+                <li><a href="/lab_reports">Lab Reports</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
